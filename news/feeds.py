@@ -3,9 +3,9 @@ from django.urls import reverse
 from .models import Post
 
 class MyProfessionalFeed(Feed):
-    title = "DNN Blog - Latest News"
+    title = "legitexs - Latest News"
     link = "/rss/"
-    description = "Latest news from DNN Blog: tech, sports, politics, finance."
+    description = "Latest news from legitexs: tech, sports, politics, finance."
 
     def items(self):
         # Fetch only published posts, latest 20
@@ -17,25 +17,25 @@ class MyProfessionalFeed(Feed):
     def item_description(self, item):
         # Add excerpt and Read more link
         description = item.excerpt or item.content[:200]  # fallback if excerpt is empty
-        read_more = f'<p><a href="https://myblog.com/{item.slug}/">Read more</a></p>'
+        read_more = f'<p><a href="https://legitexs.com/{item.slug}/">Read more</a></p>'
         # Add image if exists
         if item.image:
-            img_tag = f'<p><img src="https://myblog.com{item.image.url}" alt="{item.title}" /></p>'
+            img_tag = f'<p><img src="https://legitexs.com{item.image.url}" alt="{item.title}" /></p>'
             return img_tag + description + read_more
         return description + read_more
 
     def item_link(self, item):
-        return f"https://myblog.com/{item.slug}/"
+        return f"https://legitexs.com/{item.slug}/"
 
     def item_pubdate(self, item):
         return item.published_date or item.created_date
 
     def item_guid(self, item):
-        return f"https://myblog.com/{item.slug}/"
+        return f"https://legitexs.com/{item.slug}/"
 
     def item_enclosure_url(self, item):
         if item.image:
-            return f"https://myblog.com{item.image.url}"
+            return f"https://legitexs.com{item.image.url}"
         return None
 
     def item_enclosure_length(self, item):
