@@ -20,7 +20,7 @@
         <div class="header-container">
             <div class="header-top">
                 <div class="bbc-logo">
-                    <span class="logo-text">DNN</span>
+                    <span class="logo-text">legitexs</span>
                 </div>
 
                 <div class="nav-searc">
@@ -39,8 +39,10 @@
             <nav class="bbc-nav" id="mainNav" >
                 <button class="close-menu" aria-label="Close menu"></button>
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="{% url 'home' %}" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="{% url 'music_list' %}" class="nav-link" style="color: #fa4b2d;">Music</a></li>
+                    <li class="nav-item"><a href="{% url 'home' %}" class="nav-link"  style="color: #bb1919;">Home</a></li>
+                    <li class="nav-item"><a href="{% url 'video_list' %}" class="nav-link" style="color: #bb1919;">Video</a></li>
+
+                    <li class="nav-item"><a href="{% url 'music_list' %}" class="nav-link" style="color: #bb1919;">Music</a></li>
                     {% for category in main_categories %}
                     <li class="nav-item">
                         <a href="{% url 'category_posts' category.slug %}" class="nav-link" style="color: {{ category.color }};">
@@ -64,8 +66,10 @@
          <nav class="bbc-na"  >
                 <button class="close-menu" aria-label="Close menu"></button>
                 <ul class="nav-lis">
-                    <li class="nav-ite"><a href="{% url 'home' %}" class="nav-lin">Home</a></li>
-                    <li class="nav-ite"><a href="{% url 'music_list' %}" class="nav-lin" style="color: #fa4b2d;">Music</a></li>
+                    <li class="nav-ite"><a href="{% url 'home' %}" class="nav-lin" style="color: #bb1919;">Home</a></li>
+                    <li class="nav-ite"><a href="{% url 'video_list' %}" class="nav-lin" style="color: #bb1919;">Video</a></li>
+
+                    <li class="nav-ite"><a href="{% url 'music_list' %}" class="nav-lin" style="color: #bb1919;">Music</a></li>
                     {% for category in main_categories %}
                     <li class="nav-ite">
                         <a href="{% url 'category_posts' category.slug %}" class="nav-lin" style="color: {{ category.color }};">
@@ -89,7 +93,7 @@
     <!-- BBC Footer -->
     <footer class="bbc-footer">
         <div class="footer-container">
-            <h3>Explore the BBC</h3>
+            <h3>Explore the legitexs</h3>
             <div class="footer-links">
                 <div class="footer-column">
                     <h4>Categories</h4>
@@ -109,7 +113,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2024 BBC Blog. This is a demonstration site.</p>
+                <p>© 2025 legitexs. </p>
             </div>
         </div>
     </footer>
